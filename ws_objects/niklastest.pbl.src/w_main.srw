@@ -68,6 +68,8 @@ type tab_frame_1 from tab within w_main
 end type
 type tabpage_unit_converter from userobject within tab_frame_1
 end type
+type st_9 from statictext within tabpage_unit_converter
+end type
 type st_6 from statictext within tabpage_unit_converter
 end type
 type st_5 from statictext within tabpage_unit_converter
@@ -99,6 +101,7 @@ end type
 type ddlb_unit_type from dropdownlistbox within tabpage_unit_converter
 end type
 type tabpage_unit_converter from userobject within tab_frame_1
+st_9 st_9
 st_6 st_6
 st_5 st_5
 cb_reset_unit cb_reset_unit
@@ -2910,6 +2913,7 @@ long backcolor = 67108864
 string text = "Konverter"
 long tabtextcolor = 33554432
 long picturemaskcolor = 536870912
+st_9 st_9
 st_6 st_6
 st_5 st_5
 cb_reset_unit cb_reset_unit
@@ -2928,6 +2932,7 @@ ddlb_unit_type ddlb_unit_type
 end type
 
 on tabpage_unit_converter.create
+this.st_9=create st_9
 this.st_6=create st_6
 this.st_5=create st_5
 this.cb_reset_unit=create cb_reset_unit
@@ -2943,7 +2948,8 @@ this.cb_switch=create cb_switch
 this.ddlb_unit_output=create ddlb_unit_output
 this.ddlb_unit_input=create ddlb_unit_input
 this.ddlb_unit_type=create ddlb_unit_type
-this.Control[]={this.st_6,&
+this.Control[]={this.st_9,&
+this.st_6,&
 this.st_5,&
 this.cb_reset_unit,&
 this.st_8,&
@@ -2961,6 +2967,7 @@ this.ddlb_unit_type}
 end on
 
 on tabpage_unit_converter.destroy
+destroy(this.st_9)
 destroy(this.st_6)
 destroy(this.st_5)
 destroy(this.cb_reset_unit)
@@ -2977,6 +2984,23 @@ destroy(this.ddlb_unit_output)
 destroy(this.ddlb_unit_input)
 destroy(this.ddlb_unit_type)
 end on
+
+type st_9 from statictext within tabpage_unit_converter
+integer x = 1737
+integer y = 224
+integer width = 402
+integer height = 64
+integer textsize = -10
+integer weight = 400
+fontcharset fontcharset = ansi!
+fontpitch fontpitch = variable!
+fontfamily fontfamily = swiss!
+string facename = "Tahoma"
+long textcolor = 33554432
+long backcolor = 67108864
+string text = "Test2"
+boolean focusrectangle = false
+end type
 
 type st_6 from statictext within tabpage_unit_converter
 integer x = 1001
