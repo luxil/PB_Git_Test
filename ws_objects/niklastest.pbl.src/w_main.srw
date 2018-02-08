@@ -68,6 +68,8 @@ type tab_frame_1 from tab within w_main
 end type
 type tabpage_unit_converter from userobject within tab_frame_1
 end type
+type st_5 from statictext within tabpage_unit_converter
+end type
 type cb_reset_unit from commandbutton within tabpage_unit_converter
 end type
 type st_8 from statictext within tabpage_unit_converter
@@ -95,6 +97,7 @@ end type
 type ddlb_unit_type from dropdownlistbox within tabpage_unit_converter
 end type
 type tabpage_unit_converter from userobject within tab_frame_1
+st_5 st_5
 cb_reset_unit cb_reset_unit
 st_8 st_8
 st_7 st_7
@@ -2904,6 +2907,7 @@ long backcolor = 67108864
 string text = "Konverter"
 long tabtextcolor = 33554432
 long picturemaskcolor = 536870912
+st_5 st_5
 cb_reset_unit cb_reset_unit
 st_8 st_8
 st_7 st_7
@@ -2920,6 +2924,7 @@ ddlb_unit_type ddlb_unit_type
 end type
 
 on tabpage_unit_converter.create
+this.st_5=create st_5
 this.cb_reset_unit=create cb_reset_unit
 this.st_8=create st_8
 this.st_7=create st_7
@@ -2933,7 +2938,8 @@ this.cb_switch=create cb_switch
 this.ddlb_unit_output=create ddlb_unit_output
 this.ddlb_unit_input=create ddlb_unit_input
 this.ddlb_unit_type=create ddlb_unit_type
-this.Control[]={this.cb_reset_unit,&
+this.Control[]={this.st_5,&
+this.cb_reset_unit,&
 this.st_8,&
 this.st_7,&
 this.st_3,&
@@ -2949,6 +2955,7 @@ this.ddlb_unit_type}
 end on
 
 on tabpage_unit_converter.destroy
+destroy(this.st_5)
 destroy(this.cb_reset_unit)
 destroy(this.st_8)
 destroy(this.st_7)
@@ -2963,6 +2970,23 @@ destroy(this.ddlb_unit_output)
 destroy(this.ddlb_unit_input)
 destroy(this.ddlb_unit_type)
 end on
+
+type st_5 from statictext within tabpage_unit_converter
+integer x = 229
+integer y = 872
+integer width = 654
+integer height = 64
+integer textsize = -10
+integer weight = 400
+fontcharset fontcharset = ansi!
+fontpitch fontpitch = variable!
+fontfamily fontfamily = swiss!
+string facename = "Tahoma"
+long textcolor = 33554432
+long backcolor = 67108864
+string text = "Das ist ein Test von Linh"
+boolean focusrectangle = false
+end type
 
 type cb_reset_unit from commandbutton within tabpage_unit_converter
 integer x = 1157
@@ -3041,12 +3065,14 @@ integer y = 992
 integer width = 402
 integer height = 112
 integer taborder = 40
+integer transparency = 21
 integer textsize = -10
-integer weight = 400
+integer weight = 700
 fontcharset fontcharset = ansi!
 fontpitch fontpitch = variable!
 fontfamily fontfamily = swiss!
 string facename = "Tahoma"
+boolean italic = true
 string text = "Convert"
 boolean flatstyle = true
 end type
@@ -3426,7 +3452,7 @@ integer cornerwidth = 46
 end type
 
 type st_name_label from statictext within tabpage_mem_new
-integer x = 70
+integer x = 69
 integer y = 444
 integer width = 165
 integer height = 80
@@ -3576,9 +3602,9 @@ End if
 end event
 
 type sle_memory_value_edit from singlelineedit within tabpage_mem_new
-integer x = 246
+integer x = 247
 integer y = 784
-integer width = 1340
+integer width = 1339
 integer height = 88
 integer taborder = 50
 integer textsize = -10
@@ -3623,9 +3649,9 @@ change_memory(i_current_index)
 end event
 
 type sle_memory_namechange_edit from singlelineedit within tabpage_mem_new
-integer x = 246
+integer x = 247
 integer y = 540
-integer width = 1340
+integer width = 1339
 integer height = 92
 integer taborder = 50
 integer textsize = -10
@@ -3644,9 +3670,9 @@ End if
 end event
 
 type st_memory_value from statictext within tabpage_mem_new
-integer x = 246
+integer x = 247
 integer y = 684
-integer width = 1520
+integer width = 1522
 integer height = 92
 integer textsize = -10
 integer weight = 400
@@ -3662,7 +3688,7 @@ boolean focusrectangle = false
 end type
 
 type st_value_label from statictext within tabpage_mem_new
-integer x = 70
+integer x = 69
 integer y = 684
 integer width = 160
 integer height = 80
@@ -3679,9 +3705,9 @@ boolean focusrectangle = false
 end type
 
 type st_current_memory_label from statictext within tabpage_mem_new
-integer x = 246
+integer x = 247
 integer y = 440
-integer width = 1520
+integer width = 1522
 integer height = 92
 integer textsize = -10
 integer weight = 400
