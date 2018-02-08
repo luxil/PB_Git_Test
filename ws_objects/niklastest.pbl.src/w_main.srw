@@ -68,6 +68,8 @@ type tab_frame_1 from tab within w_main
 end type
 type tabpage_unit_converter from userobject within tab_frame_1
 end type
+type st_6 from statictext within tabpage_unit_converter
+end type
 type st_5 from statictext within tabpage_unit_converter
 end type
 type cb_reset_unit from commandbutton within tabpage_unit_converter
@@ -97,6 +99,7 @@ end type
 type ddlb_unit_type from dropdownlistbox within tabpage_unit_converter
 end type
 type tabpage_unit_converter from userobject within tab_frame_1
+st_6 st_6
 st_5 st_5
 cb_reset_unit cb_reset_unit
 st_8 st_8
@@ -2907,6 +2910,7 @@ long backcolor = 67108864
 string text = "Konverter"
 long tabtextcolor = 33554432
 long picturemaskcolor = 536870912
+st_6 st_6
 st_5 st_5
 cb_reset_unit cb_reset_unit
 st_8 st_8
@@ -2924,6 +2928,7 @@ ddlb_unit_type ddlb_unit_type
 end type
 
 on tabpage_unit_converter.create
+this.st_6=create st_6
 this.st_5=create st_5
 this.cb_reset_unit=create cb_reset_unit
 this.st_8=create st_8
@@ -2938,7 +2943,8 @@ this.cb_switch=create cb_switch
 this.ddlb_unit_output=create ddlb_unit_output
 this.ddlb_unit_input=create ddlb_unit_input
 this.ddlb_unit_type=create ddlb_unit_type
-this.Control[]={this.st_5,&
+this.Control[]={this.st_6,&
+this.st_5,&
 this.cb_reset_unit,&
 this.st_8,&
 this.st_7,&
@@ -2955,6 +2961,7 @@ this.ddlb_unit_type}
 end on
 
 on tabpage_unit_converter.destroy
+destroy(this.st_6)
 destroy(this.st_5)
 destroy(this.cb_reset_unit)
 destroy(this.st_8)
@@ -2970,6 +2977,23 @@ destroy(this.ddlb_unit_output)
 destroy(this.ddlb_unit_input)
 destroy(this.ddlb_unit_type)
 end on
+
+type st_6 from statictext within tabpage_unit_converter
+integer x = 1001
+integer y = 184
+integer width = 402
+integer height = 64
+integer textsize = -10
+integer weight = 400
+fontcharset fontcharset = ansi!
+fontpitch fontpitch = variable!
+fontfamily fontfamily = swiss!
+string facename = "Tahoma"
+long textcolor = 33554432
+long backcolor = 67108864
+string text = "Noch ein Test"
+boolean focusrectangle = false
+end type
 
 type st_5 from statictext within tabpage_unit_converter
 integer x = 229
