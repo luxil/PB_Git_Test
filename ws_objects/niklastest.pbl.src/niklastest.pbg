@@ -1,0 +1,9 @@
+﻿Save Format v3.0(19990112)
+@begin Libraries
+ "niklastest.pbl" "";
+@end;
+@begin Objects 
+ "niklastest.sra" "niklastest.pbl";
+ "dw_1.srd" "niklastest.pbl";
+ "w_main.srw" "niklastest.pbl";
+@end;
