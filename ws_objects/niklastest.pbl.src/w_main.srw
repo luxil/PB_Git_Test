@@ -3086,6 +3086,8 @@ convert_units_new &
 i_active_input_unit, i_active_output_unit)
 
 tab_frame_1.tabpage_unit_converter.sle_unit_converter_output.Text = string(d_unit_conversion_result)
+
+//testkommentar von linh
 end event
 
 type st_2 from statictext within tabpage_unit_converter
