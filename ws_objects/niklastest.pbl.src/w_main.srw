@@ -68,8 +68,6 @@ type tab_frame_1 from tab within w_main
 end type
 type tabpage_unit_converter from userobject within tab_frame_1
 end type
-type st_11 from statictext within tabpage_unit_converter
-end type
 type st_10 from statictext within tabpage_unit_converter
 end type
 type st_9 from statictext within tabpage_unit_converter
@@ -105,7 +103,6 @@ end type
 type ddlb_unit_type from dropdownlistbox within tabpage_unit_converter
 end type
 type tabpage_unit_converter from userobject within tab_frame_1
-st_11 st_11
 st_10 st_10
 st_9 st_9
 st_6 st_6
@@ -2919,7 +2916,6 @@ long backcolor = 67108864
 string text = "Konverter"
 long tabtextcolor = 33554432
 long picturemaskcolor = 536870912
-st_11 st_11
 st_10 st_10
 st_9 st_9
 st_6 st_6
@@ -2940,7 +2936,6 @@ ddlb_unit_type ddlb_unit_type
 end type
 
 on tabpage_unit_converter.create
-this.st_11=create st_11
 this.st_10=create st_10
 this.st_9=create st_9
 this.st_6=create st_6
@@ -2958,8 +2953,7 @@ this.cb_switch=create cb_switch
 this.ddlb_unit_output=create ddlb_unit_output
 this.ddlb_unit_input=create ddlb_unit_input
 this.ddlb_unit_type=create ddlb_unit_type
-this.Control[]={this.st_11,&
-this.st_10,&
+this.Control[]={this.st_10,&
 this.st_9,&
 this.st_6,&
 this.st_5,&
@@ -2979,7 +2973,6 @@ this.ddlb_unit_type}
 end on
 
 on tabpage_unit_converter.destroy
-destroy(this.st_11)
 destroy(this.st_10)
 destroy(this.st_9)
 destroy(this.st_6)
@@ -2998,23 +2991,6 @@ destroy(this.ddlb_unit_output)
 destroy(this.ddlb_unit_input)
 destroy(this.ddlb_unit_type)
 end on
-
-type st_11 from statictext within tabpage_unit_converter
-integer x = 1669
-integer y = 824
-integer width = 379
-integer height = 316
-integer textsize = -10
-integer weight = 400
-fontcharset fontcharset = ansi!
-fontpitch fontpitch = variable!
-fontfamily fontfamily = swiss!
-string facename = "Tahoma"
-long textcolor = 33554432
-long backcolor = 67108864
-string text = "Test 4"
-boolean focusrectangle = false
-end type
 
 type st_10 from statictext within tabpage_unit_converter
 integer x = 1838
