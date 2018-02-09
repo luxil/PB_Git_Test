@@ -68,8 +68,11 @@ type tab_frame_1 from tab within w_main
 end type
 type tabpage_unit_converter from userobject within tab_frame_1
 end type
+<<<<<<< HEAD
 type st_10 from statictext within tabpage_unit_converter
 end type
+=======
+>>>>>>> 00a88e2f5eb17dd2c86afb7078fef3832824de2b
 type st_9 from statictext within tabpage_unit_converter
 end type
 type st_6 from statictext within tabpage_unit_converter
@@ -103,7 +106,10 @@ end type
 type ddlb_unit_type from dropdownlistbox within tabpage_unit_converter
 end type
 type tabpage_unit_converter from userobject within tab_frame_1
+<<<<<<< HEAD
 st_10 st_10
+=======
+>>>>>>> 00a88e2f5eb17dd2c86afb7078fef3832824de2b
 st_9 st_9
 st_6 st_6
 st_5 st_5
@@ -2916,7 +2922,10 @@ long backcolor = 67108864
 string text = "Konverter"
 long tabtextcolor = 33554432
 long picturemaskcolor = 536870912
+<<<<<<< HEAD
 st_10 st_10
+=======
+>>>>>>> 00a88e2f5eb17dd2c86afb7078fef3832824de2b
 st_9 st_9
 st_6 st_6
 st_5 st_5
@@ -2936,7 +2945,10 @@ ddlb_unit_type ddlb_unit_type
 end type
 
 on tabpage_unit_converter.create
+<<<<<<< HEAD
 this.st_10=create st_10
+=======
+>>>>>>> 00a88e2f5eb17dd2c86afb7078fef3832824de2b
 this.st_9=create st_9
 this.st_6=create st_6
 this.st_5=create st_5
@@ -2953,8 +2965,12 @@ this.cb_switch=create cb_switch
 this.ddlb_unit_output=create ddlb_unit_output
 this.ddlb_unit_input=create ddlb_unit_input
 this.ddlb_unit_type=create ddlb_unit_type
+<<<<<<< HEAD
 this.Control[]={this.st_10,&
 this.st_9,&
+=======
+this.Control[]={this.st_9,&
+>>>>>>> 00a88e2f5eb17dd2c86afb7078fef3832824de2b
 this.st_6,&
 this.st_5,&
 this.cb_reset_unit,&
@@ -2973,7 +2989,10 @@ this.ddlb_unit_type}
 end on
 
 on tabpage_unit_converter.destroy
+<<<<<<< HEAD
 destroy(this.st_10)
+=======
+>>>>>>> 00a88e2f5eb17dd2c86afb7078fef3832824de2b
 destroy(this.st_9)
 destroy(this.st_6)
 destroy(this.st_5)
@@ -2992,6 +3011,7 @@ destroy(this.ddlb_unit_input)
 destroy(this.ddlb_unit_type)
 end on
 
+<<<<<<< HEAD
 type st_10 from statictext within tabpage_unit_converter
 integer x = 1838
 integer y = 540
@@ -3009,6 +3029,8 @@ string text = "TEST3"
 boolean focusrectangle = false
 end type
 
+=======
+>>>>>>> 00a88e2f5eb17dd2c86afb7078fef3832824de2b
 type st_9 from statictext within tabpage_unit_converter
 integer x = 1737
 integer y = 224
