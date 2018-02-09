@@ -3049,6 +3049,9 @@ string text = "Noch ein Test"
 boolean focusrectangle = false
 end type
 
+event clicked;messagebox("","")
+end event
+
 type st_5 from statictext within tabpage_unit_converter
 integer x = 229
 integer y = 872
