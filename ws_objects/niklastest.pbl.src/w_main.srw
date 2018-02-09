@@ -3009,7 +3009,7 @@ string text = "TEST3"
 boolean focusrectangle = false
 end type
 
-event clicked;messagebox("TestBranches","TestBranches") 
+event clicked;messagebox("Testbranches2", "Testbranches2") 
 end event
 
 type st_9 from statictext within tabpage_unit_converter
