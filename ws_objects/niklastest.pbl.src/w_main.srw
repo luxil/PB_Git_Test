@@ -3009,7 +3009,7 @@ string text = "TEST3"
 boolean focusrectangle = false
 end type
 
-event clicked;messagebox("Testbranches2", "Testbranches2") 
+event clicked;messagebox("TestBranches","TestBranches") 
 end event
 
 type st_9 from statictext within tabpage_unit_converter
@@ -3028,6 +3028,9 @@ long backcolor = 67108864
 string text = "Test2"
 boolean focusrectangle = false
 end type
+
+event clicked;messagebox("","")
+end event
 
 type st_6 from statictext within tabpage_unit_converter
 integer x = 1001
